@@ -45,7 +45,7 @@ html, button{
 header {
     width: 100%;
     height: var(--header_height);
-    transition: all 0.5s;
+    transition: all 0.2s;
     z-index: 100;
     position: fixed;
     @extend %flex_center_div;
@@ -65,7 +65,7 @@ header {
                 a {
                     color: var(--text_color_mid);
                     font-size: var(--font_size_smaller);
-                    font-weight: var(--font_weight_medium);
+                    font-weight: var(--font_weight_regular);
                 }
                 .active {
                     font-weight: var(--font_weight_semibold);
@@ -456,7 +456,7 @@ header {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                height: 120px;
+                height: 130px;
                 text-align: center;
                 .subheading {
                     color: var(--accent-color);
@@ -471,7 +471,6 @@ header {
                     color: var(--text_color_mid);
                     font-size: var(--font_size_small);
                     font-weight: var(--font_weight_regular);
-                    margin-top: 15px;
                 }
             
 
@@ -561,6 +560,132 @@ header {
                     .card_icon {
                         background: linear-gradient(154.49deg, #FFD085 6.61%, #FFAF2E 89.72%);
                         box-shadow: 0px 10px 22px -2px rgba(250, 186, 84, 0.3);
+                    }
+                }
+            }
+            
+        }
+    }
+    .active_member_section {
+        display: flex;
+        align-items: center;
+        .active_member_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .top_container {
+                max-width: 450px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 130px;
+                text-align: center;
+                .subheading {
+                    color: var(--accent-color);
+                    font-size: var(--font_size_medium);
+                    font-weight: var(--font_weight_medium);
+                }
+                .heading {
+                    font-size: var(--font_size_largest);
+                    font-weight: var(--font_weight_bold);
+                }
+                .content {
+                    color: var(--text_color_mid);
+                    font-size: var(--font_size_small);
+                    font-weight: var(--font_weight_regular);
+                }
+            
+
+            }
+            .swiper {
+                width: 900px;
+                height: fit-content;
+              } 
+            .card_container {
+                margin: 70px 0px 100px 0px;
+                .card {
+                     width: 270px;
+                     height: 316px;
+                     border-radius: 14px;
+                     border: 2px solid rgba(243, 243, 243, 0.5);
+                     @extend %flex_center_div;
+                     flex-direction: column;
+                     row-gap: 30px;
+                     .image_container {
+                         height: 166px;
+                         width: 166px;
+                         position: relative;
+                         @extend %flex_center_div;
+                        svg {
+                            position: absolute;
+                            width: 100%;
+                        }
+                        .check_icon {
+                            position: absolute;
+                            bottom: 0;
+                        }
+                        .profile {
+                            height: 142px;
+                            width: 142px;
+                            border-radius: 50%;
+                            background-position: center;
+                        }
+                     }
+                     .content {
+                         text-align: center;
+                         .name {
+                             font-size: var(--font_size_large);
+                             font-weight: var(--font_weight_semibold);
+                             color: var(--text_color_semi_dark);
+                         }
+                         .user_id {
+                             font-size: var(--font_size_small);
+                             font-weight: var(--font_weight_regular);
+                             color: var(--text_color_mid);
+                             margin-top: 10px;
+                         }
+                     }
+                }
+                .swiper-slide-active {
+                    border: transparent;
+                    box-shadow: 0px 34px 68px rgba(116, 115, 128, 0.1),
+                    0px 3px 20px rgba(116, 115, 128, 0.1);
+                    
+                }
+                .person1{
+                    .profile {
+                        background-image: url('/assets/img/active_member_page/person1.jpg');
+                    }
+                }
+                .person2{
+                    .profile {
+                        background-image: url('/assets/img/active_member_page/person2.jpg');
+                    }
+                }
+                .person3{
+                    .profile {
+                        background-image: url('/assets/img/active_member_page/person3.jpg');
+                    }
+                }
+                .person4{
+                    .profile {
+                        background-image: url('/assets/img/active_member_page/person4.jpg');
+                    }
+                }
+                .person5{
+                    .profile {
+                        background-image: url('/assets/img/active_member_page/person5.jpg');
+                    }
+                }
+                .person6{
+                    .profile {
+                        background-image: url('/assets/img/active_member_page/person6.jpg');
+                    }
+                }
+                .person7{
+                    .profile {
+                        background-image: url('/assets/img/active_member_page/person7.jpg');
                     }
                 }
             }

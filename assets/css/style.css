@@ -30,7 +30,7 @@ html, button {
   --header_height:90px;
 }
 
-.main_container .community_section .community_container .grid_container .card .card_icon, header {
+.main_container .active_member_section .active_member_container .card_container .card .image_container, .main_container .active_member_section .active_member_container .card_container .card, .main_container .community_section .community_container .grid_container .card .card_icon, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,7 @@ html, button {
 header {
   width: 100%;
   height: var(--header_height);
-  transition: all 0.5s;
+  transition: all 0.2s;
   z-index: 100;
   position: fixed;
 }
@@ -60,7 +60,7 @@ header nav .nav_menu {
 header nav .nav_menu .item a {
   color: var(--text_color_mid);
   font-size: var(--font_size_smaller);
-  font-weight: var(--font_weight_medium);
+  font-weight: var(--font_weight_regular);
 }
 header nav .nav_menu .item .active {
   font-weight: var(--font_weight_semibold);
@@ -434,7 +434,7 @@ header nav .nav_login_button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 120px;
+  height: 130px;
   text-align: center;
 }
 .main_container .community_section .community_container .top_container .subheading {
@@ -450,7 +450,6 @@ header nav .nav_login_button {
   color: var(--text_color_mid);
   font-size: var(--font_size_small);
   font-weight: var(--font_weight_regular);
-  margin-top: 15px;
 }
 .main_container .community_section .community_container .grid_container {
   margin: 70px 0px 100px 0px;
@@ -523,4 +522,109 @@ header nav .nav_login_button {
 .main_container .community_section .community_container .grid_container .list_scroll_card .card_icon {
   background: linear-gradient(154.49deg, #FFD085 6.61%, #FFAF2E 89.72%);
   box-shadow: 0px 10px 22px -2px rgba(250, 186, 84, 0.3);
+}
+.main_container .active_member_section {
+  display: flex;
+  align-items: center;
+}
+.main_container .active_member_section .active_member_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main_container .active_member_section .active_member_container .top_container {
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 130px;
+  text-align: center;
+}
+.main_container .active_member_section .active_member_container .top_container .subheading {
+  color: var(--accent-color);
+  font-size: var(--font_size_medium);
+  font-weight: var(--font_weight_medium);
+}
+.main_container .active_member_section .active_member_container .top_container .heading {
+  font-size: var(--font_size_largest);
+  font-weight: var(--font_weight_bold);
+}
+.main_container .active_member_section .active_member_container .top_container .content {
+  color: var(--text_color_mid);
+  font-size: var(--font_size_small);
+  font-weight: var(--font_weight_regular);
+}
+.main_container .active_member_section .active_member_container .swiper {
+  width: 900px;
+  height: fit-content;
+}
+.main_container .active_member_section .active_member_container .card_container {
+  margin: 70px 0px 100px 0px;
+}
+.main_container .active_member_section .active_member_container .card_container .card {
+  width: 270px;
+  height: 316px;
+  border-radius: 14px;
+  border: 2px solid rgba(243, 243, 243, 0.5);
+  flex-direction: column;
+  row-gap: 30px;
+}
+.main_container .active_member_section .active_member_container .card_container .card .image_container {
+  height: 166px;
+  width: 166px;
+  position: relative;
+}
+.main_container .active_member_section .active_member_container .card_container .card .image_container svg {
+  position: absolute;
+  width: 100%;
+}
+.main_container .active_member_section .active_member_container .card_container .card .image_container .check_icon {
+  position: absolute;
+  bottom: 0;
+}
+.main_container .active_member_section .active_member_container .card_container .card .image_container .profile {
+  height: 142px;
+  width: 142px;
+  border-radius: 50%;
+  background-position: center;
+}
+.main_container .active_member_section .active_member_container .card_container .card .content {
+  text-align: center;
+}
+.main_container .active_member_section .active_member_container .card_container .card .content .name {
+  font-size: var(--font_size_large);
+  font-weight: var(--font_weight_semibold);
+  color: var(--text_color_semi_dark);
+}
+.main_container .active_member_section .active_member_container .card_container .card .content .user_id {
+  font-size: var(--font_size_small);
+  font-weight: var(--font_weight_regular);
+  color: var(--text_color_mid);
+  margin-top: 10px;
+}
+.main_container .active_member_section .active_member_container .card_container .swiper-slide-active {
+  border: transparent;
+  box-shadow: 0px 34px 68px rgba(116, 115, 128, 0.1), 0px 3px 20px rgba(116, 115, 128, 0.1);
+}
+.main_container .active_member_section .active_member_container .card_container .person1 .profile {
+  background-image: url("/assets/img/active_member_page/person1.jpg");
+}
+.main_container .active_member_section .active_member_container .card_container .person2 .profile {
+  background-image: url("/assets/img/active_member_page/person2.jpg");
+}
+.main_container .active_member_section .active_member_container .card_container .person3 .profile {
+  background-image: url("/assets/img/active_member_page/person3.jpg");
+}
+.main_container .active_member_section .active_member_container .card_container .person4 .profile {
+  background-image: url("/assets/img/active_member_page/person4.jpg");
+}
+.main_container .active_member_section .active_member_container .card_container .person5 .profile {
+  background-image: url("/assets/img/active_member_page/person5.jpg");
+}
+.main_container .active_member_section .active_member_container .card_container .person6 .profile {
+  background-image: url("/assets/img/active_member_page/person6.jpg");
+}
+.main_container .active_member_section .active_member_container .card_container .person7 .profile {
+  background-image: url("/assets/img/active_member_page/person7.jpg");
 }/*# sourceMappingURL=style.css.map */
