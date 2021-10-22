@@ -37,8 +37,10 @@ header {
 }
 
 header {
-  width: 100vw;
+  width: 100%;
   height: var(--header_height);
+  transition: all 0.5s;
+  position: fixed;
 }
 header nav {
   max-width: 1200px;
@@ -73,6 +75,10 @@ header nav .nav_login_button {
   border-radius: 14px;
 }
 
+.scroll-header {
+  background-color: white;
+}
+
 .main_container section {
   width: 100%;
 }
@@ -83,6 +89,7 @@ header nav .nav_login_button {
   margin-right: auto;
 }
 .main_container .home_section {
+  padding-top: var(--header_height);
   height: 656px;
   display: flex;
   align-items: center;
@@ -140,9 +147,11 @@ header nav .nav_login_button {
 }
 .main_container .home_section .home_container .right_side {
   width: 50%;
+  display: flex;
+  justify-content: flex-end;
 }
 .main_container .home_section .home_container .right_side img {
-  width: 100%;
+  width: 90%;
 }
 .main_container .why_section {
   height: 656px;
