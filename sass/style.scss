@@ -34,6 +34,8 @@ html, button{
      
     // -----------Header height----------//
     --header_height:90px;
+
+    --why_image_val:1;
 }
 
 %flex_center_div {
@@ -242,8 +244,8 @@ header {
                 .first_img {
                     grid-area: first;
                     background-color: rebeccapurple;
-                    height: 368px;
-                    width: 270px;
+                    height:calc( 368px*var(--why_image_val));
+                    width: calc( 270px*var(--why_image_val));
                     align-self: center;
                     background-image: url('/assets/img/why_page/first.jpg');
                     background-position: center;
@@ -252,8 +254,8 @@ header {
                 .second_img {
                     grid-area: second;
                     background-color: red;
-                    height: 238px;
-                    width: 265px;
+                    height:calc( 238px*var(--why_image_val));
+                    width: calc( 265px*var(--why_image_val));
                     align-self: flex-end;
                     background-image: url('/assets/img/why_page/second.jpg');
                     background-position: center;
@@ -262,8 +264,8 @@ header {
                 .third_img {
                     grid-area: third;
                     background-color: green;
-                    height: 238px;
-                    width: 265px;
+                    height:calc( 238px*var(--why_image_val));
+                    width: calc( 265px*var(--why_image_val));
                     background-image: url('/assets/img/why_page/third.jpg');
                     background-position: center;
                     border-radius: 15px;
@@ -971,6 +973,378 @@ footer {
             justify-content: space-between;
             .linkin {
                 height: 23px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    :root {
+        --font_size_largest: 32px;
+    }
+    section {
+        padding: 0px 20px ;
+    }
+    header, footer {
+        padding: 0px 20px ;
+    }
+    .main_container .home_section .home_container .left_side .heading{
+        font-size: 48px;
+    }
+    .main_container .achievement_section .achievement_container .rating_card,
+    .main_container .achievement_section .achievement_container .awwwards_card {
+        height: 302px;
+        width: 306px;
+    }
+    .main_container .achievement_section .achievement_container .right_side {
+        height: 302px;
+        width: 310px;
+    }
+    .main_container .community_section .community_container .grid_container .card {
+        max-width: 465px;
+        height: 160px;
+        padding: 30px;
+    }
+    .main_container .news_section .news_container .card_container .card {
+        width: 300px;
+        height: 420px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    // -----------Header height----------//
+    :root{
+        --header_height:70px;
+
+    }
+    header nav .nav_menu {
+        display: none;
+    }
+    // -------------home----------------
+    .main_container .home_section{
+        height: 520px;
+    }
+    .main_container .home_section .home_container .left_side .heading {
+        font-size: 42px;
+    }
+    .main_container .home_section .home_container .left_side .button_container .download_button {
+        margin-right: 20px;
+    }
+
+// ------------why section----------------
+:root {
+    --why_image_val:0.7;
+}
+.main_container .why_section{
+    height: 570px;
+}
+.main_container .why_section .why_container .left_side {
+    height: 315px;
+    width: 40%;
+}
+
+//-----------------Achivement------------------
+.main_container .achievement_section{
+    height: 760px;
+}
+.main_container .achievement_section .achievement_container{
+    display: grid;
+    grid-template-areas: 'right_side right_side' 'rating awwwards';
+    justify-content: normal;
+    .rating_card{
+        grid-area: rating;
+        margin: 0px auto;
+    }
+    .awwwards_card{
+        grid-area: awwwards;
+    }
+    .right_side {
+        grid-area: right_side;
+        margin-bottom: 50px;
+    }
+}
+.main_container .achievement_section .achievement_container{
+    margin-bottom: 50px;
+}
+
+// ---------------community----------------
+.main_container .community_section .community_container .grid_container{
+    grid-gap: 30px;
+    grid-template-columns: repeat(1, max-content);
+}
+.main_container .community_section .community_container .grid_container .card .card_icon{
+   
+}
+.main_container .community_section .community_container .grid_container .card{
+}
+// --------------Active Member---------------
+.main_container .active_member_section .active_member_container .swiper{
+    width: 729px;
+}
+.main_container .active_member_section .active_member_container .card_container .card{
+    height: 300px;
+}
+// ------------News--------------
+.main_container .news_section{
+    height: 600px;
+}
+.main_container .news_section .news_container .card_container .card{
+    width: 220px;
+    height: 340px;
+}
+
+// --------------quick link----------------
+.main_container .quick_link_section .quick_link_container .link_container{
+    max-width: 350px;
+}
+}
+@media only screen and (max-width: 769px) {
+    :root {
+        // ----------Text font size-----------//
+        --font_size_largest: 28px;
+        // -----------Header height----------//
+        --header_height:70px;
+    
+        --why_image_val:0.7;
+    }
+    // ------------Header----------
+    header nav .nav_login_button {
+    padding: 14px 34px;
+    }
+    // ------------Home--------------
+    .main_container .home_section {
+        height: fit-content;
+        padding-bottom:70px ;
+        .home_container {
+            flex-direction: column-reverse;
+            column-gap: 0px;
+            row-gap: 20px;
+            .left_side {
+                width: 100%;
+                align-self: flex-end;
+            .heading {
+                font-size: 38px;
+            }
+            .button_container {
+                .download_button {
+                    margin-right: 50px;
+                }
+
+            }
+            }
+            .right_side {
+                width: 70%;
+                max-width: 400px;
+                justify-content: center;
+            }
+        }
+    }
+    // ------------Why--------------
+    .main_container .why_section {
+        height: fit-content;
+        padding-bottom:70px ;
+    }
+    .main_container .why_section .why_container {
+        column-gap: 20px;
+        flex-direction: column-reverse;
+    }
+    .main_container .why_section .why_container .right_side{
+        grid-gap: 20px;
+    }
+    .main_container .why_section .why_container .left_side {
+        width: 100%;
+    }
+
+    // ------------Achievement--------------
+    .main_container .achievement_section {
+        height: fit-content;
+        padding-bottom:70px ;
+        .achievement_container{
+            grid-template-areas: "right_side" "rating" "awwwards";
+            justify-content: center;
+            grid-row-gap: 50px;
+            margin-bottom: 0px;
+            .right_side {
+                margin-bottom: 0px;
+                width: 100%;
+                height: fit-content;
+                row-gap: 20px;
+            }
+            .awwwards_card {
+                justify-self: center;
+            }
+
+        }
+    }
+    // -----------Community-------------
+    .main_container .community_section .community_container {
+        padding-bottom: 50px;
+    }
+    .main_container .community_section .community_container .grid_container .card {
+        height: fit-content;
+        max-width: 429px;
+    }
+    .main_container .community_section .community_container .grid_container {
+        margin-bottom: 0px;
+    }
+    // -----------Active-------------
+    .main_container .active_member_section .active_member_container .swiper {
+        width: 100%;
+    }
+    // --------App----------
+    .main_container .app_section{
+        height: fit-content;
+        .app_container {
+           flex-direction: column-reverse;
+           padding: 70px 0px;
+           row-gap: 50px;
+           .right_side img {
+               height: 350px;
+           }
+           .left_side {
+                width: 100%;
+                height: fit-content;
+               .container {
+                   width: 100%;
+                   display: flex;
+                   flex-direction: column;
+                row-gap: 20px;
+                .content {
+                    margin-bottom: 0px;
+                }
+               }
+           }
+       }
+
+    }
+    // --------News----------
+    .main_container .news_section{
+        height: fit-content;
+        .news_container{
+            padding: 70px 0px;
+            .card_container {
+               flex-direction: column;
+               row-gap: 30px;
+               align-items: center;
+               .card {
+                   width: 300px;
+                   height: 400px;
+               }
+           }
+        }
+    } 
+    // --------Quick Link-------
+    .main_container .quick_link_section{
+        height: fit-content;
+        .quick_link_container {
+            padding: 50px 0px;
+           flex-direction: column-reverse;
+           row-gap: 50px;
+           .subscribe_container {
+               width: 100%;
+               max-width: 500px;
+               height: fit-content;
+               row-gap: 30px;
+           }
+           .link_container {
+               max-width: 500px;
+               width: 100%;
+           }
+       }
+    }
+    // --------footer--------
+    footer .footer_container .social_container {
+        width: 120px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    :root {
+    --why_image_val:0.55;
+    --header_height:60px;
+    
+    }
+    // -----Header-------
+    header, footer{
+        padding: 0px 10px;
+    }
+    header nav {
+        .nav_login_button {
+            padding: 12px 24px;
+            border-radius: 10px;
+        }
+        img {
+            height: 30px;
+        }
+    }
+    // -----footer-----
+    footer .footer_container {
+        .logo {
+            height: 22px;
+        }
+    }
+    section {
+        padding: 0px 10px;
+    }
+    // --------Home---------
+    .main_container .home_section .home_container{
+        margin-top: 20px;
+        .left_side{
+            .heading {
+                font-size: 36px;
+            }
+            .button_container {
+              display: flex;
+              justify-content: space-between;
+              .download_button {
+                  margin-right: 0px;
+              }
+          }
+        }
+       .right_side img {
+           width: 280px;
+       }
+    }
+    // ---------Why--------
+    .main_container .why_section .why_container .right_side {
+        grid-gap: 15px;
+    }
+    .main_container .why_section .why_container .right_side .first_img, 
+    .main_container .why_section .why_container .right_side .second_img, 
+    .main_container .why_section .why_container .right_side .third_img {
+        border-radius: 10px;
+    }
+    // --------Community--------
+    .main_container .community_section .community_container .grid_container .card {
+        max-width: 340px;
+    }
+    .main_container .community_section .community_container .grid_container .card {
+        grid-row-gap: 10px;
+        grid-column-gap: 20px;
+        padding: 25px;
+    }
+    .main_container .community_section .community_container .grid_container .card .card_icon img{
+        width: 28px;
+    }
+    .main_container .community_section .community_container .grid_container .list_builder_card .card_icon img{
+        width: 21px;
+    }
+    .main_container .community_section .community_container .grid_container .card .card_icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 22px;
+    }
+
+    // --------Active---------
+    .main_container .active_member_section .active_member_container .card_container .card {
+        height: 250px;
+        .image_container {
+            height: 120px;
+            width: 120px;
+            .profile {
+                height: 100px;
+                width: 100px;
+            }
+            .check_icon {
+                height: 20px;
             }
         }
     }

@@ -7,17 +7,42 @@ window.addEventListener('scroll', scrollHeader)
 
 
 // ---------Swiper----------//
-const myswiper = document.querySelector('.mySwiper')
-var swiper = new Swiper(myswiper, {
+const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+var swiper_option = {
     loop: true,
-    slidesPerView: 3,
-    spaceBetween: 40,
+    // slidesPerView: 2,
+    // spaceBetween: 10,
     centeredSlides: true,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
       },
-});
+}
+
+console.log(vw);
+if (vw <= 480) {
+    swiper_option.slidesPerView = 2
+    swiper_option.spaceBetween = 10
+} else if(vw <= 769) {
+    swiper_option.slidesPerView = 2
+    swiper_option.spaceBetween = 20
+}else if(vw <= 992) {
+    swiper_option.slidesPerView = 3
+    swiper_option.spaceBetween = 30
+} else {
+    swiper_option.slidesPerView = 3
+    swiper_option.spaceBetween = 30
+}
+
+
+
+
+
+
+
+
+const myswiper = document.querySelector('.mySwiper')
+var swiper = new Swiper(myswiper, swiper_option);
   
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
