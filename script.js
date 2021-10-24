@@ -89,3 +89,29 @@ document.querySelectorAll('.nav_menu a').forEach(each => {
         
     })
 });
+
+// -----------Mobile Navigation System------------
+const mobi_nav_button = document.querySelector('.mobile_nav_button')
+const nav_menu = document.querySelector('.nav_menu')
+const mobile_nav_overlay = document.querySelector('.mobile_nav_overlay')
+const nav_menu_items = document.querySelectorAll('.nav_menu_container .item')
+mobi_nav_button.addEventListener('click',() => {
+    mobi_nav_button.classList.toggle('mobile_nav_button_active')
+    nav_menu.classList.toggle('nav_menu_active')
+    mobile_nav_overlay.classList.toggle('mobile_nav_overlay_active')
+})
+mobile_nav_overlay.addEventListener('click',() => {
+    mobi_nav_button.classList.toggle('mobile_nav_button_active')
+    nav_menu.classList.toggle('nav_menu_active')
+    mobile_nav_overlay.classList.toggle('mobile_nav_overlay_active')
+})
+
+nav_menu_items.forEach(element => {
+    console.log(element);
+    element.addEventListener('click', () => {
+        console.log('working');
+        mobi_nav_button.classList.toggle('mobile_nav_button_active')
+    nav_menu.classList.toggle('nav_menu_active')
+    mobile_nav_overlay.classList.toggle('mobile_nav_overlay_active')
+    })
+});

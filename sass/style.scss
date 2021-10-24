@@ -59,22 +59,49 @@ header {
         justify-content: space-between;
         align-items: center;
         .nav_menu {
-            display: flex;
             max-width: 500px;
             width: 100%;
-            justify-content: space-between;
-            .item {
-                a {
-                    color: var(--text_color_mid);
-                    font-size: var(--font_size_smaller);
-                    font-weight: var(--font_weight_regular);
+            transition: all 0.5s;
+            .nav_menu_container {
+                display: flex;
+                justify-content: space-between;
+                .item {
+                    a {
+                        color: var(--text_color_mid);
+                        font-size: var(--font_size_smaller);
+                        font-weight: var(--font_weight_regular);
+                    }
+                    .active {
+                        font-weight: var(--font_weight_semibold);
+                        color: var(--text_color_dark);
+                    }
                 }
-                .active {
-                    font-weight: var(--font_weight_semibold);
-                    color: var(--text_color_dark);
-                }
+
             }
         }
+        
+        .nav_menu_active {
+            right: 0 !important;
+        }
+        .mobile_nav_overlay {
+            position: absolute;
+            height: 100vh;
+            width: 0vw;
+            top: 0;
+            right: 0;
+            background-color: rgb(0 0 0 / 11%);
+            // z-index: -1;
+            opacity: 0;
+            backdrop-filter: blur(2px);
+            transition: opacity 0.2s;
+        }
+        .mobile_nav_overlay_active {
+            width: 100vw;
+            opacity: 1;
+        }
+        
+
+
         .nav_login_button {
             background-color: var(--accent-color);
             border: none;
@@ -84,6 +111,57 @@ header {
             padding: 18px 45px;
             border-radius: 14px;
 
+        }
+        .mobile_nav_button {
+            height: 20px;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            z-index: 100;
+            
+            .first_bar {
+                height: 3px;
+                width: 25px;
+                background-color: var(--text_color_dark);
+                border-radius: 2px;
+                transition: all 0.2s;
+
+            }
+            .second_bar {
+                height: 3px;
+                width: 18px;
+                background-color: var(--text_color_dark);
+                border-radius: 2px;
+                transition: all 0.2s;
+
+            }
+            .third_bar {
+                height: 3px;
+                width: 12px;
+                background-color: var(--text_color_dark);
+                border-radius: 2px;
+                transition: all 0.2s;
+
+            }
+        }
+        .mobile_nav_button_active {
+            .second_bar {
+                width: 0px;
+                
+            }
+            .third_bar {
+                width: 25px;
+                background-color: red;
+                transform: rotate(45deg);
+                transform-origin:bottom right ;
+            }
+            .first_bar {
+                background-color: red;
+                transform: rotate(-45deg);
+                transform-origin:top right ;
+
+            }
         }
     }
 }
@@ -250,6 +328,7 @@ header {
                     background-image: url('/assets/img/why_page/first.jpg');
                     background-position: center;
                     border-radius: 15px;
+                    background-size: cover;
                 }
                 .second_img {
                     grid-area: second;
@@ -260,6 +339,8 @@ header {
                     background-image: url('/assets/img/why_page/second.jpg');
                     background-position: center;
                     border-radius: 15px;
+                    background-size: cover;
+
                 }
                 .third_img {
                     grid-area: third;
@@ -269,6 +350,7 @@ header {
                     background-image: url('/assets/img/why_page/third.jpg');
                     background-position: center;
                     border-radius: 15px;
+                    background-size: cover;
                 }
             }
         }
@@ -638,6 +720,7 @@ header {
                             width: 142px;
                             border-radius: 50%;
                             background-position: center;
+                            background-size: cover;
                         }
                      }
                      .content {
@@ -1017,8 +1100,43 @@ footer {
 
     }
     header nav .nav_menu {
-        display: none;
+        // display: ;
+        position: absolute;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        width: 50%;
+        max-width: 300px;
+        right: -100%;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        box-shadow: -5px 0px 20px #72727233;
+        .nav_menu_container {
+            flex-direction: column;
+            align-items: center;
+            height: 40%;
+            .item {
+                user-select: none;
+            }
+        }
+        
     }
+    header nav{
+        .buttons_container {
+            display: flex;
+            align-items: center;
+            .nav_login_button {
+                background-color: transparent;
+                color: var(--accent-color);
+            }
+        } 
+
+        .mobile_nav_button{
+            display: flex;
+        }
+    } 
     // -------------home----------------
     .main_container .home_section{
         height: 520px;
@@ -1044,6 +1162,7 @@ footer {
 
 //-----------------Achivement------------------
 .main_container .achievement_section{
+    padding-top: 50px;
     height: 760px;
 }
 .main_container .achievement_section .achievement_container{
@@ -1267,9 +1386,13 @@ footer {
         padding: 0px 10px;
     }
     header nav {
+        
         .nav_login_button {
             padding: 12px 24px;
             border-radius: 10px;
+            background-color: transparent;
+            color: var(--accent-color);
+            justify-self: flex-end;
         }
         img {
             height: 30px;
