@@ -83,22 +83,7 @@ header {
         .nav_menu_active {
             right: 0 !important;
         }
-        .mobile_nav_overlay {
-            position: absolute;
-            height: 100vh;
-            width: 0vw;
-            top: 0;
-            right: 0;
-            background-color: rgb(0 0 0 / 11%);
-            // z-index: -1;
-            opacity: 0;
-            backdrop-filter: blur(2px);
-            transition: opacity 0.2s;
-        }
-        .mobile_nav_overlay_active {
-            width: 100vw;
-            opacity: 1;
-        }
+        
         
 
 
@@ -1135,6 +1120,22 @@ footer {
 
         .mobile_nav_button{
             display: flex;
+        }
+        .mobile_nav_overlay {
+            position: absolute;
+            height: 100vh;
+            width: 0vw;
+            top: 0;
+            right: 0;
+            background-color: rgb(0 0 0 / 11%);
+            // z-index: -1;
+            opacity: 0;
+            backdrop-filter: blur(2px);
+            transition: opacity 0.2s;
+        }
+        .mobile_nav_overlay_active {
+            width: 100vw;
+            opacity: 1;
         }
     } 
     // -------------home----------------

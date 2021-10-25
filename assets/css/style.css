@@ -73,21 +73,6 @@ header nav .nav_menu .nav_menu_container .item .active {
 header nav .nav_menu_active {
   right: 0 !important;
 }
-header nav .mobile_nav_overlay {
-  position: absolute;
-  height: 100vh;
-  width: 0vw;
-  top: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.11);
-  opacity: 0;
-  backdrop-filter: blur(2px);
-  transition: opacity 0.2s;
-}
-header nav .mobile_nav_overlay_active {
-  width: 100vw;
-  opacity: 1;
-}
 header nav .nav_login_button {
   background-color: var(--accent-color);
   border: none;
@@ -1035,6 +1020,21 @@ footer .footer_container .social_container .linkin {
   }
   header nav .mobile_nav_button {
     display: flex;
+  }
+  header nav .mobile_nav_overlay {
+    position: absolute;
+    height: 100vh;
+    width: 0vw;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.11);
+    opacity: 0;
+    backdrop-filter: blur(2px);
+    transition: opacity 0.2s;
+  }
+  header nav .mobile_nav_overlay_active {
+    width: 100vw;
+    opacity: 1;
   }
 
   .main_container .home_section {
