@@ -39,7 +39,6 @@ var swiper_option = {
       },
 }
 const discover_button = document.querySelector('.discover_button')
-console.log(vw);
 if (vw <= 480) {
     swiper_option.slidesPerView = 2
     swiper_option.spaceBetween = 10
@@ -128,9 +127,7 @@ mobile_nav_overlay.addEventListener('click',() => {
 })
 
 nav_menu_items.forEach(element => {
-    console.log(element);
     element.addEventListener('click', () => {
-        console.log('working');
         mobi_nav_button.classList.toggle('mobile_nav_button_active')
     nav_menu.classList.toggle('nav_menu_active')
     mobile_nav_overlay.classList.toggle('mobile_nav_overlay_active')

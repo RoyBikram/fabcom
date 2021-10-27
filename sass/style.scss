@@ -537,7 +537,8 @@ header {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                height: 130px;
+                // height: 130px;
+                row-gap: 15px;
                 text-align: center;
                 .subheading {
                     color: var(--accent-color);

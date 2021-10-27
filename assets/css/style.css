@@ -606,7 +606,7 @@ header nav .mobile_nav_button_active .first_bar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 130px;
+  row-gap: 15px;
   text-align: center;
 }
 .main_container .community_section .community_container .top_container .subheading {
