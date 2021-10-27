@@ -43,6 +43,9 @@ html, button{
    justify-content: center;
    align-items: center;
   }
+main {
+    overflow: hidden;
+}
 
 header {
     width: 100%;
@@ -261,6 +264,7 @@ header {
                     color: var(--accent-color);
                     font-size: var(--font_size_large);
                     font-weight: var(--font_weight_medium);
+                    width: fit-content;
                 }
                 .heading {
                     color: var(--text_color_dark);
@@ -358,7 +362,7 @@ header {
                 flex-direction: column;
                 justify-content: space-between;
                 border-radius: 15px;
-
+                overflow: hidden;
                 .heading_container {
                     display: flex;
                     align-items: center;
@@ -421,7 +425,7 @@ header {
                 border-radius: 15px;
                 border: 2px solid var(--text_color_light);
                 border: 2px solid rgb(100, 167, 255);
-
+                overflow: hidden;
                 .heading_container {
                     display: flex;
                     align-items: center;
@@ -490,6 +494,7 @@ header {
                     color: var(--accent-color);
                     font-size: var(--font_size_medium);
                     font-weight: var(--font_weight_medium);
+                    width: fit-content;
                 }
                 .heading {
                     font-size: var(--font_size_largest);
@@ -567,6 +572,7 @@ header {
                     grid-row-gap: 20px;
                     grid-column-gap: 35px;
                     padding: 40px;
+                    overflow: hidden;
                     grid-template-areas: 'card_icon heading''card_icon content';
                     .heading {
                         align-self: flex-end;

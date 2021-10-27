@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Netbook</title>
+    <title>Fabcom</title>
 </head>
 <body>
     <header>
@@ -17,13 +18,13 @@
             <img src="assets/img/common/logo.svg" alt="" class="logo">
             <div class="nav_menu">
                 <div class="nav_menu_container">
-                    <div class="item"><a class="active" data-location="#home">Home</a></div>
-                    <div class="item"><a data-location="#why">Why Us</a></div>
-                    <div class="item"><a data-location="#achievement">Achievement</a></div>
-                    <div class="item"><a data-location="#community">Community</a></div>
-                    <div class="item"><a data-location="#member">Member</a></div>
-                    <div class="item"><a data-location="#app">App</a></div>
-                    <div class="item"><a data-location="#news">News</a></div>
+                    <div data-aos='fade-left' data-aos-delay="50" class="item"><a class="active" data-location="#home">Home</a></div>
+                    <div data-aos='fade-left' data-aos-delay="200" class="item"><a data-location="#why">Why Us</a></div>
+                    <div data-aos='fade-left' data-aos-delay="350" class="item"><a data-location="#achievement">Achievement</a></div>
+                    <div data-aos='fade-left' data-aos-delay="500" class="item"><a data-location="#community">Community</a></div>
+                    <div data-aos='fade-left' data-aos-delay="650" class="item"><a data-location="#member">Member</a></div>
+                    <div data-aos='fade-left' data-aos-delay="800" class="item"><a data-location="#app">App</a></div>
+                    <div data-aos='fade-left' data-aos-delay="950" class="item"><a data-location="#news">News</a></div>
                     
                 </div>
             </div>
@@ -45,12 +46,12 @@
         <section class="home_section" id="home">
             <div class="home_container section_container">
                 <div class="left_side">
-                    <div class="subheading">Netbook Community</div>
+                    <div data-aos="zoom-out" class="subheading">Netbook Community</div>
                     <div class="heading">Your Solutions For Community!</div>
                     <div class="content">More than 2 billion people in over countries use socibook to stay in touch with friends & family.</div>
                     <div class="button_container">
-                        <Button class="download_button">Download App</Button>
-                        <Button class="invite_button">Invite Friend</Button>
+                        <Button data-aos-offset="50" data-aos="fade-up" data-aos-delay="300" class="download_button">Download App</Button>
+                        <Button data-aos-offset="50" data-aos="fade-up" data-aos-delay="600" class="invite_button">Invite Friend</Button>
                     </div>
                 </div>
                 <div class="right_side">
@@ -61,19 +62,19 @@
         <section class="why_section" id="why">
             <div class="why_container section_container">
                 <div class="left_side">
-                    <div class="subheading">Whats Netbooks?</div>
+                    <div data-aos="zoom-out" data-aos-delay="50" class="subheading">Whats Netbooks?</div>
                     <div class="heading">Why Join to Netbook Social Network?</div>
                     <div class="content">Recent surveys have indicated that small businesses recognise the need they have to connect with consumer.</div>
                     <div class="list_container">
-                        <div class="item">
+                        <div data-aos="fade-right" data-aos-delay="50" class="item">
                             <div class="bullet"></div>
                             <div class="content">Group</div>
                         </div>
-                        <div class="item">
+                        <div data-aos="fade-right" data-aos-delay="200" class="item">
                             <div class="bullet"></div>
                             <div class="content">Messages</div>
                         </div>
-                        <div class="item">
+                        <div data-aos="fade-right" data-aos-delay="350" class="item">
                             <div class="bullet"></div>
                             <div class="content">Share</div>
                         </div>
@@ -92,18 +93,18 @@
         <section class="achievement_section" id="achievement">
             <div class="achievement_container section_container">
                 <div class="rating_card">
-                    <div class="heading_container">
+                    <div data-aos="fade-right" data-aos-delay="50" class="heading_container">
                         <img src="assets/img/common/Star.svg" alt="" class="heading_icon">
                         <div class="heading">4.8 Rating</div>
                     </div>
-                    <div class="subheading_container">
+                    <div data-aos="fade-right" data-aos-delay="100" class="subheading_container">
                         <img src="assets/img/achievement_page/people.png" alt="" class="subheading_icon">
                         <div class="subheading"><span>+836k</span>Members</div>
                     </div>
-                    <div class="content">
+                    <div data-aos="fade-right" data-aos-delay="150" class="content">
                         More than 2 billion we people over countries use socibooks we to stay in touch with friends.
                     </div>
-                    <button class="button_container">
+                    <button data-aos="fade-right" data-aos-delay="200" class="button_container">
                         <div class="content">Join Our Community</div>
                         <svg class="button_icon" width="15" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.5625 4H8.4375" stroke="rgba(33, 123, 244, 1)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -112,18 +113,18 @@
                     </button>
                 </div>
                 <div class="awwwards_card">
-                    <div class="heading_container">
+                    <div data-aos="fade-right" data-aos-delay="250" class="heading_container">
                         <img src="assets/img/common/Trophy.svg" alt="" class="heading_icon">
                         <div class="heading">Awwwards</div>
                     </div>
-                    <div class="subheading_container">
+                    <div data-aos="fade-right" data-aos-delay="300" class="subheading_container">
                         <img src="assets/img/achievement_page/github.svg" alt="" class="subheading_icon">
                         <div class="subheading">Best of <span>2021</span> on Github</div>
                     </div>
-                    <div class="content">
+                    <div data-aos="fade-right" data-aos-delay="350" class="content">
                         More than 2 billion we people over countries use socibooks we to stay in touch with friends.
                     </div>
-                    <button class="button_container">
+                    <button data-aos="fade-right" data-aos-delay="400" class="button_container">
                         <div class="content">Go To Awards</div>
                         <svg class="button_icon" width="15" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.5625 4H8.4375" stroke="rgba(47, 44, 74, 0.9)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -132,58 +133,58 @@
                     </button>
                 </div>
                 <div class="right_side">
-                    <div class="subheading">Our Achievement</div>
+                    <div data-aos="zoom-out" class="subheading">Our Achievement</div>
                     <div class="heading">We are Connecting You The Digital Life.</div>
                     <div class="content">The scope the Social Media becomes crucial Is helps the business to directly engage with their needs and wants.</div>
-                    <Button class="discover_button">Discover me</Button>
+                    <Buttong class="discover_button">Discover me</Buttong>
                 </div>
             </div>
         </section>
         <section class="community_section" id="community">
             <div class="community_container section_container">
                 <div class="top_container">
-                    <div class="subheading">Our Community</div>
+                    <div data-aos="zoom-out" class="subheading">Our Community</div>
                     <div class="heading">Community Main Feature</div>
                     <div class="content">The wise man therefore always holds in these matters to this principle of selection.</div>
                 </div>
                 <div class="grid_container">
-                    <div class="members_card card">
-                        <div class="card_icon">
+                    <div data-aos="fade-up" class="members_card card">
+                        <div data-aos="zoom-out" data-aos-delay="100" class="card_icon">
                             <img src="assets/img/community_page/member.svg" alt="" srcset="">
                         </div>
                         <div class="heading">Members, Friends</div>
                         <div class="content">Members, Friends Connection ( like followers ), Private Message.</div>
                     </div>
-                    <div class="groups_card card">
-                        <div class="card_icon">
+                    <div data-aos="fade-up" data-aos-delay="100" class="groups_card card">
+                        <div data-aos="zoom-out" data-aos-delay="200" class="card_icon">
                             <img src="assets/img/community_page/group.svg" alt="" srcset="">
                         </div>
                         <div class="heading">Groups</div>
                         <div class="content">Your users can create groups to let other users to join and talk.</div>
                     </div>
-                    <div class="forum_card card">
-                        <div class="card_icon">
+                    <div data-aos="fade-up" data-aos-delay="200" class="forum_card card">
+                        <div data-aos="zoom-out" data-aos-delay="300" class="card_icon">
                             <img src="assets/img/community_page/forum.svg" alt="" srcset="">
                         </div>
                         <div class="heading">Forum</div>
                         <div class="content">Forum is ready by BBPress. Your users can make topics and talk.</div>
                     </div>
-                    <div class="custom_module_card card">
-                        <div class="card_icon">
+                    <div data-aos="fade-up" data-aos-delay="300" class="custom_module_card card">
+                        <div data-aos="zoom-out" data-aos-delay="400" class="card_icon">
                             <img src="assets/img/community_page/custom.svg" alt="" srcset="">
                         </div>
                         <div class="heading">Custom Module</div>
                         <div class="content">You can create Members, Groups Module. We already created 3 modules.</div>
                     </div>
-                    <div class="list_builder_card card">
-                        <div class="card_icon">
+                    <div data-aos="fade-up" data-aos-delay="400" class="list_builder_card card">
+                        <div data-aos="zoom-out" data-aos-delay="500" class="card_icon">
                             <img src="assets/img/community_page/list builder.svg" alt="" srcset="">
                         </div>
                         <div class="heading">List Builder</div>
                         <div class="content">Members, Groups list can be modified by drag & drop live builder.</div>
                     </div>
-                    <div class="list_scroll_card card">
-                        <div class="card_icon">
+                    <div data-aos="fade-up" data-aos-delay="500" class="list_scroll_card card">
+                        <div data-aos="zoom-out" data-aos-delay="600" class="card_icon">
                             <img src="assets/img/community_page/list scroll.svg" alt="" srcset="">
                         </div>
                         <div class="heading">List Scroll Effects</div>
@@ -196,7 +197,7 @@
         <section class="active_member_section" id="member">
             <div class="active_member_container section_container">
                 <div class="top_container">
-                    <div class="subheading">Valuable Team</div>
+                    <div data-aos="zoom-out" class="subheading">Valuable Team</div>
                     <div class="heading">Our Active Members</div>
                     <div class="content">When an unknown printer took a galley of type and meeting fari scrambled it.</div>
                 </div>
@@ -343,12 +344,12 @@
             <div class="app_container section_container">
                 <div class="left_side">
                     <div class="container">
-                        <div class="subheading">Get Our Aplication</div>
+                        <div data-aos="zoom-out" class="subheading">Get Our Aplication</div>
                         <div class="heading">You Can Easily Find This App…!</div>
                         <div class="content">I say chap that’s suing lavatory chip shop gosh off his smashing boot are you taking the piss posh loo brilliant.</div>
                         <div class="button_container">
-                            <img src="assets/img/app_page/ios.png" alt="" class="ios">
-                            <img src="assets/img/app_page/android.png" alt="" class="android">
+                            <img data-aos="fade-left" data-aos-delay="100" src="assets/img/app_page/ios.png" alt="" class="ios">
+                            <img data-aos="fade-left" data-aos-delay="200" src="assets/img/app_page/android.png" alt="" class="android">
                         </div>
                     </div>
                 </div>
@@ -360,14 +361,14 @@
         <section class="news_section" id="news">
             <div class="news_container section_container">
                 <div class="top_container">
-                    <div class="subheading">Valuable Team</div>
+                    <div data-aos="zoom-out" class="subheading">Valuable Team</div>
                     <div class="heading">Our Active Members</div>
                 </div>
                 <div class="card_container">
                     <div class="card">
                         <img src="assets/img/news_page/image1.jpg" alt="" class="thumbnail">
                         <div class="title">It Does Not Matter Hows Slowly go as Long.</div>
-                        <button class="button_container">
+                        <button data-aos="fade-left" class="button_container">
                             <div class="content">Continue Reading</div>
                             <svg class="button_icon" width="15" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.5625 4H8.4375" stroke="rgba(33, 123, 244, 1)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -378,7 +379,7 @@
                     <div class="card">
                         <img src="assets/img/news_page/image2.jpg" alt="" class="thumbnail">
                         <div class="title">Netbook Network Added New Photo Filter.</div>
-                        <button class="button_container">
+                        <button data-aos="fade-left" data-aos-delay="200" class="button_container">
                             <div class="content">Continue Reading</div>
                             <svg class="button_icon" width="15" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.5625 4H8.4375" stroke="rgba(33, 123, 244, 1)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -389,7 +390,7 @@
                     <div class="card">
                         <img src="assets/img/news_page/image3.jpg" alt="" class="thumbnail">
                         <div class="title">We Optimised Netbooks Better Navigation.</div>
-                        <button class="button_container">
+                        <button  data-aos="fade-left" data-aos-delay="400"  class="button_container">
                             <div class="content">Continue Reading</div>
                             <svg class="button_icon" width="15" height="12" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.5625 4H8.4375" stroke="rgba(33, 123, 244, 1)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -456,6 +457,7 @@
         </div>
 
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>

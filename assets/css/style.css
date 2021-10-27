@@ -37,6 +37,10 @@ html, button {
   align-items: center;
 }
 
+main {
+  overflow: hidden;
+}
+
 header {
   width: 100%;
   height: var(--header_height);
@@ -228,6 +232,7 @@ header nav .mobile_nav_button_active .first_bar {
   color: var(--accent-color);
   font-size: var(--font_size_large);
   font-weight: var(--font_weight_medium);
+  width: fit-content;
 }
 .main_container .why_section .why_container .left_side .heading {
   color: var(--text_color_dark);
@@ -321,6 +326,7 @@ header nav .mobile_nav_button_active .first_bar {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 15px;
+  overflow: hidden;
 }
 .main_container .achievement_section .achievement_container .rating_card .heading_container {
   display: flex;
@@ -383,6 +389,7 @@ header nav .mobile_nav_button_active .first_bar {
   border-radius: 15px;
   border: 2px solid var(--text_color_light);
   border: 2px solid #64a7ff;
+  overflow: hidden;
 }
 .main_container .achievement_section .achievement_container .awwwards_card .heading_container {
   display: flex;
@@ -445,6 +452,7 @@ header nav .mobile_nav_button_active .first_bar {
   color: var(--accent-color);
   font-size: var(--font_size_medium);
   font-weight: var(--font_weight_medium);
+  width: fit-content;
 }
 .main_container .achievement_section .achievement_container .right_side .heading {
   font-size: var(--font_size_largest);
@@ -517,6 +525,7 @@ header nav .mobile_nav_button_active .first_bar {
   grid-row-gap: 20px;
   grid-column-gap: 35px;
   padding: 40px;
+  overflow: hidden;
   grid-template-areas: "card_icon heading" "card_icon content";
 }
 .main_container .community_section .community_container .grid_container .card .heading {
@@ -1363,4 +1372,4 @@ footer .footer_container .social_container .linkin {
   .main_container .active_member_section .active_member_container .card_container .card .image_container .check_icon {
     height: 20px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
