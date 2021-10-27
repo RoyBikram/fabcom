@@ -1,5 +1,23 @@
+/*==================== PRELOADER ====================*/
+var preloaderContainer = document.querySelector('.preloaderContainer');
+
+function preloadFunction() {
+    setTimeout(() => {
+        preloaderContainer.style.opacity = '0'
+        setTimeout(() => {
+            preloaderContainer.style.display = 'none'
+            // Animation on scroll initialize
+            AOS.init({
+                duration: 600,
+                easing: 'ease'
+            });
+
+        },500);
+    }, 2000);
+}
+
 // -------------------AOS animation initialize------------------
-AOS.init();
+// AOS.init();
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader(){
     const nav = document.querySelector('header')
@@ -20,12 +38,13 @@ var swiper_option = {
         disableOnInteraction: false,
       },
 }
-
+const discover_button = document.querySelector('.discover_button')
 console.log(vw);
 if (vw <= 480) {
     swiper_option.slidesPerView = 2
     swiper_option.spaceBetween = 10
-} else if(vw <= 769) {
+} else if (vw <= 769) {
+    discover_button.dataset.aosDelay = 50;
     swiper_option.slidesPerView = 2
     swiper_option.spaceBetween = 20
 }else if(vw <= 992) {

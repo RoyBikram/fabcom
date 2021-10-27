@@ -12,7 +12,25 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Fabcom</title>
 </head>
-<body>
+<body  onload="preloadFunction()">
+    <!-- -------Preloader---------- -->
+    <div class="preloaderContainer">
+        <div class="loader">
+            <div class="square"></div>
+            <div class="path">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+          <!-- <p class="text-load">Loading</p> -->
+        </div>
+    </div>
+
+
     <header>
         <nav class="nav_bar">
             <img src="assets/img/common/logo.svg" alt="" class="logo">
@@ -136,7 +154,7 @@
                     <div data-aos="zoom-out" class="subheading">Our Achievement</div>
                     <div class="heading">We are Connecting You The Digital Life.</div>
                     <div class="content">The scope the Social Media becomes crucial Is helps the business to directly engage with their needs and wants.</div>
-                    <Buttong class="discover_button">Discover me</Buttong>
+                    <Button data-aos="fade-left" data-aos-delay="400" class="discover_button">Discover me</Button>
                 </div>
             </div>
         </section>
@@ -362,7 +380,7 @@
             <div class="news_container section_container">
                 <div class="top_container">
                     <div data-aos="zoom-out" class="subheading">Valuable Team</div>
-                    <div class="heading">Our Active Members</div>
+                    <div class="heading">Latest News</div>
                 </div>
                 <div class="card_container">
                     <div class="card">
