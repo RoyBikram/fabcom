@@ -25,6 +25,7 @@ body .preloaderContainer {
   height: 67px;
   margin: auto;
   position: relative;
+  transform: translateX(-20px);
 }
 
 .loader .square {
@@ -214,6 +215,7 @@ header nav .mobile_nav_button .first_bar {
   background-color: var(--text_color_dark);
   border-radius: 2px;
   transition: all 0.2s;
+  transform-origin: top right;
 }
 header nav .mobile_nav_button .second_bar {
   height: 3px;
@@ -228,6 +230,7 @@ header nav .mobile_nav_button .third_bar {
   background-color: var(--text_color_dark);
   border-radius: 2px;
   transition: all 0.2s;
+  transform-origin: bottom right;
 }
 header nav .mobile_nav_button_active .second_bar {
   width: 0px;
@@ -236,12 +239,10 @@ header nav .mobile_nav_button_active .third_bar {
   width: 25px;
   background-color: red;
   transform: rotate(45deg);
-  transform-origin: bottom right;
 }
 header nav .mobile_nav_button_active .first_bar {
   background-color: red;
   transform: rotate(-45deg);
-  transform-origin: top right;
 }
 
 .scroll-header {

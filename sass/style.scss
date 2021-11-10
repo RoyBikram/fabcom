@@ -115,7 +115,7 @@ header {
                 background-color: var(--text_color_dark);
                 border-radius: 2px;
                 transition: all 0.2s;
-
+                transform-origin:top right ;
             }
             .second_bar {
                 height: 3px;
@@ -131,7 +131,7 @@ header {
                 background-color: var(--text_color_dark);
                 border-radius: 2px;
                 transition: all 0.2s;
-
+                transform-origin:bottom right ;
             }
         }
         .mobile_nav_button_active {
@@ -143,12 +143,10 @@ header {
                 width: 25px;
                 background-color: red;
                 transform: rotate(45deg);
-                transform-origin:bottom right ;
             }
             .first_bar {
                 background-color: red;
                 transform: rotate(-45deg);
-                transform-origin:top right ;
 
             }
         }
